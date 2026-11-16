@@ -61,17 +61,18 @@ git update-index --again
 
 Only settings that differ from Biome's defaults. Each one needs a reason here.
 
-| Setting                                | Value    | Biome default | Why                                                                                            |
-| -------------------------------------- | -------- | ------------- | ---------------------------------------------------------------------------------------------- |
-| `vcs.useIgnoreFile`                    | `true`   | `false`       | Skips what `.gitignore` skips.                                                                 |
-| `files.ignoreUnknown`                  | `true`   | `false`       | No errors on unsupported file types.                                                           |
-| `formatter.indentStyle`                | `space`  | `tab`         | Same look in every editor and review tool.                                                     |
-| `formatter.lineWidth`                  | 120      | 80            | Room for TypeScript signatures, still fits side-by-side diffs.                                 |
-| `javascript.formatter.quoteStyle`      | `single` | `double`      | No escaping in strings that contain HTML, JSON or quoted text.                                 |
-| `linter.rules.style.useThrowOnlyError` | `error`  | off           | Throwing a string or object loses the stack trace.                                             |
-| `yaml.formatter.enabled`               | `false`  | `true`        | Helm chart templates are not valid YAML until rendered; formatting breaks `{{ }}` expressions. |
-| `css.parser.tailwindDirectives`        | `true`   | `false`       | Parses Tailwind at-rules such as `@theme` and `@apply`.                                        |
-| `--error-on-warnings` (CI)             | on       | off           | Warnings that never fail the build get ignored.                                                |
+| Setting                                 | Value    | Biome default | Why                                                                                                     |
+| --------------------------------------- | -------- | ------------- | ------------------------------------------------------------------------------------------------------- |
+| `vcs.useIgnoreFile`                     | `true`   | `false`       | Skips what `.gitignore` skips.                                                                          |
+| `files.ignoreUnknown`                   | `true`   | `false`       | No errors on unsupported file types.                                                                    |
+| `formatter.indentStyle`                 | `space`  | `tab`         | Same look in every editor and review tool.                                                              |
+| `formatter.lineWidth`                   | 120      | 80            | Room for TypeScript signatures, still fits side-by-side diffs.                                          |
+| `javascript.formatter.quoteStyle`       | `single` | `double`      | No escaping in strings that contain HTML, JSON or quoted text.                                          |
+| `assist.actions.source.organizeImports` | `off`    | `on`          | Sorting moves imports with side effects, such as Sentry setup, below the code that must run after them. |
+| `linter.rules.style.useThrowOnlyError`  | `error`  | off           | Throwing a string or object loses the stack trace.                                                      |
+| `yaml.formatter.enabled`                | `false`  | `true`        | Helm chart templates are not valid YAML until rendered; formatting breaks `{{ }}` expressions.          |
+| `css.parser.tailwindDirectives`         | `true`   | `false`       | Parses Tailwind at-rules such as `@theme` and `@apply`.                                                 |
+| `--error-on-warnings` (CI)              | on       | off           | Warnings that never fail the build get ignored.                                                         |
 
 ## License
 
