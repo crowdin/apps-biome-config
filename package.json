@@ -1,0 +1,49 @@
+{
+  "name": "@crowdin/apps-biome-config",
+  "version": "1.0.0",
+  "description": "Shared Biome configuration for Crowdin apps",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crowdin/apps-biome-config.git"
+  },
+  "homepage": "https://github.com/crowdin/apps-biome-config#readme",
+  "bugs": {
+    "url": "https://github.com/crowdin/apps-biome-config/issues"
+  },
+  "author": {
+    "name": "Andrii Bodnar",
+    "url": "https://github.com/andrii-bodnar/"
+  },
+  "keywords": [
+    "crowdin",
+    "crowdin-apps",
+    "biome",
+    "biome-config",
+    "lint",
+    "format"
+  ],
+  "files": [
+    "biome.json",
+    "schema.json",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    "./biome": "./biome.json"
+  },
+  "scripts": {
+    "lint": "biome check --error-on-warnings",
+    "lint-fix": "biome check --write",
+    "prepack": "node -e \"require('fs').copyFileSync(require.resolve('@biomejs/biome/configuration_schema.json'),'schema.json')\""
+  },
+  "peerDependencies": {
+    "@biomejs/biome": "2.6.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@11.20.0+sha512.9a6f330a95b66446ea088faf1521405a8a01f07fde7124cc9958dfed52d4bb436737e65b08f85f37b46fcba375092558ac51262b816844b22f63406ed166bfee"
+}
