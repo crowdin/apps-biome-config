@@ -27,7 +27,7 @@ jobs:
 
       - name: Install npm CLI
         run: |
-          npm install -g npm@11.18.0
+          npm install -g npm@12.2.2
           npm -v
 
       - run: pnpm install --frozen-lockfile
