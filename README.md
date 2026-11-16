@@ -10,6 +10,15 @@ npm install --save-dev @crowdin/apps-biome-config
 
 Biome is a pinned peer dependency and installs with this package. Do not add `@biomejs/biome` separately.
 
+With pnpm, add to `pnpm-workspace.yaml`:
+
+```yaml
+publicHoistPattern:
+  - '@biomejs/biome'
+```
+
+pnpm does not link the `biome` command of a peer dependency that it installs automatically. Hoisting links it and lets editor extensions find Biome.
+
 `biome.json`:
 
 ```json
